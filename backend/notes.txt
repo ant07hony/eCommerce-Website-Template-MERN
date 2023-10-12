@@ -1,0 +1,11 @@
+- Product in stock functions
+
+async function amountInStock(){
+    // display the amount of a Product
+    // function should search through an array and display the amount of duplicates 
+    const availability = 0
+    console.log('In Stock:', availability)
+}
+amountInStock()
+
+-
