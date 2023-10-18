@@ -1,0 +1,19 @@
+.Header-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 2px rgb(182, 42, 247);
+    height: 100%;
+    width: auto;
+  }
+
+  /* .Header-container > img {
+    height: 50%;
+    width: 50%;
+  } */
+
+  .nav-global {
+    border: solid 2px rgb(43, 244, 39);
+    height: 25%;
+  }
+  

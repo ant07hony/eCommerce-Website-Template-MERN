@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+.App {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: mminmax(100px, auto);
+  grid-template-areas: 
+    "Header Header Header Header"
+    "Aside Main Main Main"
+    "Footer Footer Footer Footer"
+    ;
+}
+
+.App > * {
+  background-color: rgb(109, 177, 223);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border: solid 2px black;
+}
+
+Header{
+  grid-area: Header;
+}
+
+Aside{
+  grid-area: Aside;
+}
+
+Main{
+  grid-area: Main;
+}
+
+Footer{
+  grid-area: Footer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  text-align: center;
+  
+}
