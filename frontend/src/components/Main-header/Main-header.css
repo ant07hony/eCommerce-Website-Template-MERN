@@ -1,0 +1,8 @@
+.Main-header {
+    display: flex;
+    justify-content: center;
+    border: solid 2px rgb(245, 135, 39);
+    height: 60px;
+    width: auto;
+    margin: 0;
+}

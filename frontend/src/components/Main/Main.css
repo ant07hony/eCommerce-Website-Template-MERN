@@ -1,5 +1,24 @@
 .Main-container {
-    border: solid 2px black;
+    border: solid 2px red;
     height: 100%;
     width: auto;
+    overflow: scroll;
+}
+
+.Main-container-top {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.Main-container-top-header{
+    height: 100%;
+    width: auto;
+}
+
+.Main-container-bottom {
+    border: solid 2px rgb(247, 213, 42);
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
 }

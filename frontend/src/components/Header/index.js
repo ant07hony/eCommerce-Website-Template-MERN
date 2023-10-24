@@ -8,7 +8,7 @@ const headerImage  = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5
 const Nav = (props) => {
     return (
         <nav className='nav-global'>
-            <Link to="/">Home</Link>
+            <Link to="/">Logo(Home)</Link>
               
         </nav>
     )
