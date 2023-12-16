@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     border: solid 2px rgb(182, 42, 247);
-    height: 25vh;
+    height: 5rem;
     width: auto;
   }
 
@@ -15,7 +15,7 @@
   .nav-global {
     display: grid;
     border: solid 2px rgb(43, 244, 39);
-    height: 25%;
+    height: 2em;
     width: auto;
   }
   

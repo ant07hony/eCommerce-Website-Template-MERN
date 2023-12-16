@@ -1,24 +1,26 @@
 .Main-container {
+    display: flex;
+    flex-direction: column;
     border: solid 2px red;
     height: 100%;
     width: auto;
     overflow: scroll;
 }
 
-.Main-container-top {
-    display: flex;
-    flex-direction: column;
+/* .Main-container-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: 80vh;
-}
+} */
 
-.Main-container-top-header{
+/* .Main-container-top-header{
     height: 100%;
     width: auto;
-}
+} */
 
-.Main-container-bottom {
+.Main-footer {
     border: solid 2px rgb(247, 213, 42);
-    display: flex;
-    flex-direction: column;
-    height: 25vh;
+    /* display: flex;
+    flex-direction: column; */
+    height: 3.5rem;
 }

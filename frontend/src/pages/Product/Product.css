@@ -1,0 +1,20 @@
+.product-container {
+    border: solid black 3px;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 20px;
+    padding: 10px;
+    overflow: scroll;
+   
+}
+
+.product-card {
+    border: dotted red 1px;
+    display: grid;
+    /* display: flex; */
+    /* flex-direction: row; */
+    height: 50vh;
+    width: 100%;
+    font-size: .5rem;
+}

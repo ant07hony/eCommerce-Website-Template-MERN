@@ -9,16 +9,18 @@ export default function Main(props) {
     return (
         <main className='Main-container'>
             <MainHeader />
+            {/* <div className='Mainheader'>
+            </div> */}
             <div className='Main-container-top'>
-                <h1>Main</h1>
                 <Routes>
                     <Route path="/product" element={<Product />} />
                     <Route path="/product/:id" element={<Show />} />
                 </Routes>
             </div>
-            <div className='Main-container-bottom'>
+            <div className='Main-footer'>
                 <Footer />
             </div>
+            {/* <Footer /> */}
         </main>
     )
 }
