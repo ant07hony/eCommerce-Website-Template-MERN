@@ -13,7 +13,8 @@
   } */
 
   .nav-global {
-    display: grid;
+    display: flex;
+    justify-content: space-evenly;
     border: solid 2px rgb(43, 244, 39);
     height: 2em;
     width: auto;

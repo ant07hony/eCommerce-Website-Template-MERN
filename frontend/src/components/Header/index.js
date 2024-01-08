@@ -9,6 +9,17 @@ const Nav = (props) => {
     return (
         <nav className='nav-global'>
             <Link to="/">Logo(Home)</Link>
+            <button className='hamburger-menu'>
+                <h1>Ham Menu</h1>
+            </button>
+            <label for='search'></label>
+            <input type='text' id='search' name='search bar' value='Search'/>
+            <button className='store-locator'>
+                <h1>store locator</h1>
+            </button>
+            <button className='cart'>
+                <h1>cart</h1>
+            </button>
               
         </nav>
     )
@@ -19,6 +30,6 @@ export default function Header(props){
     <header className="Header-container">
         <Nav/>
         {/* <img src={headerImage || headerImage}/> */}
-        <h1>Header</h1>
+        {/* <h1>Header</h1> */}
     </header>)
 }
