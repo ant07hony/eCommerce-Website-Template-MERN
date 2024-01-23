@@ -46,18 +46,20 @@ export default function Product(props) {
             return (
                 <div key={product._id}
                     className='product-card'>
-                    <div className='product-image'>
-                        <h1>Product Image</h1>
+
+                        <img src="/no-product-image.png" alt="No Product Image"></img>
+
+                    <div className='product-card-body'>
+                        <h1>{product.name}</h1>
+
+                        <p>{product.description}</p>
+
+                        <h2>{product.price}</h2>
+
                     </div>
-                    <div className='product-name'>
-                        <h1>Name: {product.name}</h1>
-                    </div>
-                    <div className='product-description'>
-                        <h1>Description: {product.description}</h1>
-                    </div>
-                    <div className='product-price'>
-                        <h1>Price: {product.price}</h1>
-                    </div>
+
+                    <button>Add to Cart</button>
+
                 </div>
             )
         })

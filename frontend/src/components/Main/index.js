@@ -13,7 +13,7 @@ export default function Main(props) {
             </div> */}
             <div className='Main-container-top'>
                 <Routes>
-                    <Route path="/product" element={<Product />} />
+                    <Route path="/products" element={<Product />} />
                     <Route path="/product/:id" element={<Show />} />
                 </Routes>
             </div>
