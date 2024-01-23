@@ -1,7 +1,7 @@
 .Header-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     border: solid 2px rgb(182, 42, 247);
     height: 5rem;
     width: auto;
@@ -14,9 +14,43 @@
 
   .nav-global {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     border: solid 2px rgb(43, 244, 39);
-    height: 2em;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    padding: .8rem;
   }
+
+  .nav-global > a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* background-image: url(""); */
+    padding: 1rem;
+  }
+
+  .nav-global > button {
+    height: 2.5rem;
+  }
+
+  .hamburger-menu {
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar {
+    /* display: flex;
+    justify-content: center; */
+    padding: .5rem;
+  }
+
   

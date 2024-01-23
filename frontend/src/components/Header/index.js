@@ -10,10 +10,14 @@ const Nav = (props) => {
         <nav className='nav-global'>
             <Link to="/">Logo(Home)</Link>
             <button className='hamburger-menu'>
-                <h1>Ham Menu</h1>
+                <div className='dropdown-menu'></div>
+                Menu
+                {/* <h1>Ham Menu</h1> */}
             </button>
+            <div className='search-bar'>
             <label for='search'></label>
             <input type='text' id='search' name='search bar' value='Search'/>
+            </div>
             <button className='store-locator'>
                 <h1>store locator</h1>
             </button>
