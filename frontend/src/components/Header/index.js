@@ -1,39 +1,60 @@
 import './Header.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 // Header Image
-const headerImage  = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5e27yKYV8xmUsT-sRaZ0xWPKc47XrPNlw&usqp=CAU"
+const headerImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5e27yKYV8xmUsT-sRaZ0xWPKc47XrPNlw&usqp=CAU"
 
 const Nav = (props) => {
     return (
         <nav className='nav-global'>
-            <Link to="/">Logo(Home)</Link>
-            <button className='hamburger-menu'>
-                <div className='dropdown-menu'></div>
-                Menu
-                {/* <h1>Ham Menu</h1> */}
-            </button>
-            <div className='search-bar'>
-            <label for='search'></label>
-            <input type='text' id='search' name='search bar' value='Search'/>
+            <div className='logo-anchor'>
+                <Link to="/">Logo</Link>
             </div>
-            <button className='store-locator'>
-                <h1>store locator</h1>
-            </button>
-            <button className='cart'>
-                <h1>cart</h1>
-            </button>
-              
+
+            <div className='hamburger-menu'>
+                <div className='dropdown-menu'>
+                    <div className='hamburger-menu-line'></div>
+                    <div className='hamburger-menu-line'></div>
+                    <div className='hamburger-menu-line'></div>
+                </div>
+                <button>
+                    Menu
+                </button>
+            </div>
+
+            <div className='search-bar'>
+                <label 
+                for='search'>
+                </label>
+                <input 
+                type='text' 
+                id='search' 
+                name='search bar' value='Search' placeholder='What can we help you find today?' />
+                <button>Search</button>
+            </div>
+
+            <div className='store-locator'>
+                <button>
+                    store locator
+                </button>
+            </div>
+
+            <div className='cart'>
+                <button>
+                    cart
+                </button>
+            </div>
+
         </nav>
     )
 }
 
-export default function Header(props){
+export default function Header(props) {
     return (
-    <header className="Header-container">
-        <Nav/>
-        {/* <img src={headerImage || headerImage}/> */}
-        {/* <h1>Header</h1> */}
-    </header>)
+        <header className="Header-container">
+            <Nav />
+            {/* <img src={headerImage || headerImage}/> */}
+            {/* <h1>Header</h1> */}
+        </header>)
 }
