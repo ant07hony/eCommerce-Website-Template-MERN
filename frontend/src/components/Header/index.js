@@ -5,19 +5,14 @@ import { Link } from 'react-router-dom'
 // Header Image
 const headerImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5e27yKYV8xmUsT-sRaZ0xWPKc47XrPNlw&usqp=CAU"
 
-// const handleChange = (e) => {
-//     e.target.value
-// }
-
-// variable for search input fiels button
-const searchBtn = document.getElementById('searchBtn')
-
-// searchBtn.addEventListener('click',searchSuccessfulMessage)
-
 function handleClick() {
-    // variable for search input field
-    // const searchInput = document.getElementById('search').innerHTML
-    alert('Successful Button Click!')}
+    // variable for search input field value
+    const searchInputValue = document.getElementById('search').value
+
+    // alert box displaying search input field value
+    alert(`Searching for: ${searchInputValue}`)
+    console.log(searchInputValue)
+}
 
 const Nav = (props) => {
     
