@@ -5,7 +5,22 @@ import { Link } from 'react-router-dom'
 // Header Image
 const headerImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5e27yKYV8xmUsT-sRaZ0xWPKc47XrPNlw&usqp=CAU"
 
+// const handleChange = (e) => {
+//     e.target.value
+// }
+
+// variable for search input fiels button
+const searchBtn = document.getElementById('searchBtn')
+
+// searchBtn.addEventListener('click',searchSuccessfulMessage)
+
+function handleClick() {
+    // variable for search input field
+    // const searchInput = document.getElementById('search').innerHTML
+    alert('Successful Button Click!')}
+
 const Nav = (props) => {
+    
     return (
         <nav className='nav-global'>
             <div className='logo-anchor'>
@@ -25,13 +40,15 @@ const Nav = (props) => {
 
             <div className='search-bar'>
                 <label 
-                for='search'>
+                htmlFor='search'>
                 </label>
                 <input 
                 type='text' 
                 id='search' 
-                name='search bar' value='Search' placeholder='What can we help you find today?' />
-                <button>Search</button>
+                name='search bar'  placeholder='What can we help you find today?' />
+                <button type="submit" id="searchBtn"
+                onClick={handleClick}>Search</button>
+                
             </div>
 
             <div className='store-locator'>

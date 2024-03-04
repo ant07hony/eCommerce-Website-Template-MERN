@@ -1,7 +1,7 @@
 .Main-container {
     display: flex;
     flex-direction: column;
-    border: solid 2px red;
+    /* border: solid 2px red; */
     height: 100%;
     width: auto;
     overflow: scroll;
