@@ -1,8 +1,10 @@
 // people information [] - useState
-// fetchoing data from BE - useEffect
+// fetching data from BE - useEffect
 // loading / loaded state - ???
 
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { getProducts } from '../../utilities/product-services'
 import './Product.css'
 
 export default function Product(props) {
@@ -12,33 +14,49 @@ export default function Product(props) {
     const [isLoading, setIsLoading] = useState(true)
 
     // async function to get Product
-    const getProduct = async () => {
-        // fecthing info from this URL
-        const BASE_URL = 'http://localhost:4000/product'
+    // const getProduct = async () => {
+    //     // fecthing info from this URL
+    //     const BASE_URL = 'http://localhost:4000/product'
 
-        const options = {
-            method: 'GET'
-        }
+    //     const options = {
+    //         method: 'GET'
+    //     }
 
-        try {
-            const response = await fetch(BASE_URL, options)
+    //     try {
+    //         const response = await fetch(BASE_URL, options)
 
-            const productData = await response.json()
+    //         const productData = await response.json()
 
-            console.log('The product database: ', productData)
+    //         console.log('The product database: ', productData)
 
-            setProduct(productData)
+    //         setProduct(productData)
 
+    //         setIsLoading(false)
+
+
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     getProduct()
+    // }, [isLoading])
+    async function handleApiRequest() {
+        try{
+            const apiRepsonse = await getProducts()
+            // console.log('API response',apiRepsonse)
+
+            setProduct(apiRepsonse)
             setIsLoading(false)
 
-
-        } catch (error) {
+        } catch(error) {
             console.log(error)
         }
     }
-
+    
     useEffect(() => {
-        getProduct()
+        handleApiRequest()
     }, [isLoading])
 
     const loaded = () => {
@@ -47,7 +65,7 @@ export default function Product(props) {
                 <div key={product._id}
                     className='product-card'>
 
-                        <img src="/no-product-image.png" alt="No Product Image"></img>
+                        <Link to={`/product/${product._id}`}><img src="/no-product-image.png" alt="No Product Image"></img>
 
                     <div className='product-card-body'>
                         <h1>{product.name}</h1>
@@ -57,6 +75,7 @@ export default function Product(props) {
                         <h2>{product.price}</h2>
 
                     </div>
+                    </Link>
 
                     <button>Add to Cart</button>
 

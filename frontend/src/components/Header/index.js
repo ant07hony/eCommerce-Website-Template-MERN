@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 // Header Image
 const headerImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs5e27yKYV8xmUsT-sRaZ0xWPKc47XrPNlw&usqp=CAU"
 
-function handleClick() {
+function handleSearchClick() {
     // variable for search input field value
     const searchInputValue = document.getElementById('search').value
 
     // alert box displaying search input field value
     alert(`Searching for: ${searchInputValue}`)
-    console.log(searchInputValue)
+    // console.log(searchInputValue)
 }
 
 const Nav = (props) => {
@@ -42,7 +42,7 @@ const Nav = (props) => {
                 id='search' 
                 name='search bar'  placeholder='What can we help you find today?' />
                 <button type="submit" id="searchBtn"
-                onClick={handleClick}>Search</button>
+                onClick={handleSearchClick}>Search</button>
                 
             </div>
 
