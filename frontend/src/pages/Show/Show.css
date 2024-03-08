@@ -1,0 +1,35 @@
+.show-page {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px red; */
+    height: 100%;
+    width: auto;
+    overflow: scroll;
+}
+
+.show-page > h1 {
+    height: 3.5rem;
+}
+
+.product-section{
+    border: solid 2px red;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* .Main-container-top {
+   
+} */
+
+/* .Main-container-top-header{
+    height: 100%;
+    width: auto;
+} */
+
+/* .Main-footer {
+    border: solid 2px rgb(247, 213, 42);
+    display: flex;
+    flex-direction: column;
+    height: 3.5rem; 
+} */

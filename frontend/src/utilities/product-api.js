@@ -37,11 +37,11 @@ export async function details(id) {
         }
 
         const requestFetch = await fetch(`${apiUrl}/${id}`, options)
-        console.log(requestFetch)
+        // console.log(requestFetch)
 
         if(requestFetch.ok){
             const requestData = requestFetch.json()
-            console.log(`show data: ${requestData}`)
+            // console.log(`show data: ${requestData}`)
             return requestData
         }else{
             throw new Error('Invalid Request')

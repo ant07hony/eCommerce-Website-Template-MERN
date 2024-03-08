@@ -15,7 +15,7 @@ export async function getProducts() {
 export async function getProduct(id) {
     try{
         const productDetails = await productAPI.details(id)
-        console.log(`Product id: ${productDetails}`)
+        // console.log(`Product id: ${productDetails}`)
         return productDetails
 
     }catch(error){
