@@ -1,71 +1,86 @@
 .product-container {
     border: solid black 3px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(auto-fit, minmax(380px, 1fr)); */
-    gap: 20px 20px;
-    padding: 10px;
+    padding: 1rem;
     overflow: scroll;
    
 }
 
 .product-card {
     border: solid rgb(232, 230, 230) 1px;
-    border-radius: .2rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    /* grid-template-areas: "product-card-image" "product-card-body" "product-card-button"; */
-    /* height: 50vh; */
-    /* height: 19rem; */
-    height: 100%;
+    border-style: solid none none none;
+    background-color: var(--product-card-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
+    height: 15rem;
+    padding: 1rem;
     font-size: .5rem;
+    
 }
+
 img {
     /* border: solid black 1px; */
     justify-content: center;
     align-items: center;
-    height: 9rem;
+    height: 100%;
 }
-/* .product-card-image {
-    border: solid black 1px;
-    height: 5rem;
-} */
 
-.product-card-body {
-    /* border: solid black 1px; */
+.product-card-column-left {
+    height: 100%;
+}
+
+.product-card-column-middle {
     display: flex;
     flex-direction: column;
-    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.product-card-body > h1 {
+.product-card-column-middle > h1 {
     font-size: 1.5rem;
     text-transform: uppercase;
     margin: .5rem;
     width: auto;
-    
 }
 
-.product-card-body > p {
+.product-card-column-middle > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .7rem;
+    font-weight: normal;
+    height: 4rem;
+}
+
+.product-card-column-middle > p {
     display: flex;
     justify-content: center;
     font-size: .8rem;
     margin: .5rem;
     width: auto;
+    height: 4rem;
 }
 
-.product-card-body > h2 {
-    font-size: 1rem;
-    margin: .5rem;
+.product-card-column-right > h2 {
+    font-size: 2rem;
+    text-align: left;
+    height: 3rem;
+}
+
+.product-card-column-right {
     width: auto;
+    height: 100%;
+    /* height: 4rem; */
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 button {
     height: 2.5rem;
-    width: auto;
-    margin: .3rem;
+    width: 100%;
 }
 
 /* .grid-product-card-image {

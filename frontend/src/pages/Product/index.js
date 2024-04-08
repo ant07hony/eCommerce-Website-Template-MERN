@@ -43,18 +43,18 @@ export default function Product(props) {
     //     getProduct()
     // }, [isLoading])
     async function handleApiRequest() {
-        try{
+        try {
             const apiRepsonse = await getProducts()
             // console.log('API response',apiRepsonse)
 
             setProduct(apiRepsonse)
             setIsLoading(false)
 
-        } catch(error) {
+        } catch (error) {
             console.log(error)
         }
     }
-    
+
     useEffect(() => {
         handleApiRequest()
     }, [isLoading])
@@ -65,19 +65,28 @@ export default function Product(props) {
                 <div key={product._id}
                     className='product-card'>
 
-                        <Link to={`/product/${product._id}`}><img src="/no-product-image.png" alt="No Product Image"></img>
+                    <Link to={`/product/${product._id}`}>
 
-                    <div className='product-card-body'>
-                        <h1>{product.name}</h1>
+                        <div className='product-card-column-left'>
+                            <img src="/no-product-image.png" alt="No Product Image"></img>
+                        </div>
+
+                    </Link>
+
+                    <div className='product-card-column-middle'>
+                        <Link to={`/product/${product._id}`}>
+                            <h1>{product.name}</h1>
+                        </Link>
 
                         <p>{product.description}</p>
 
+                    </div>
+
+                    <div className='product-card-column-right'>
                         <h2>{product.price}</h2>
 
+                        <button>Add to Cart</button>
                     </div>
-                    </Link>
-
-                    <button>Add to Cart</button>
 
                 </div>
             )

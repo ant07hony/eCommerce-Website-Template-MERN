@@ -3,12 +3,20 @@
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: white;
+  --product-card-color: white;
+  --search-button-color: ;
+  --add-to-cart-button-color: ;
+
 }
 
 .App {
   /* height: 100%;
   width: auto; */
-  margin: 0;
   display: flex;
   flex-direction: column;
   /* grid-gap: 5px;
@@ -23,7 +31,7 @@
 }
 
 .App > * {
-  background-color: rgb(109, 177, 223);
+  background-color: var(--main-bg-color);
 }
 
 body {
