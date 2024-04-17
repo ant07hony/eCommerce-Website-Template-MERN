@@ -59,6 +59,8 @@ export default function Product(props) {
         handleApiRequest()
     }, [isLoading])
 
+    // handle onclick event on 'Add to Cart' button to add product to 1) redirect to Cart page and 2) add product to Cart page
+
     const loaded = () => {
         return product?.map((product) => {
             return (
@@ -67,25 +69,28 @@ export default function Product(props) {
 
                     <Link to={`/product/${product._id}`}>
 
-                        <div className='product-card-column-left'>
+                        <div className='product-card-flex-column-top'>
                             <img src="/no-product-image.png" alt="No Product Image"></img>
                         </div>
 
                     </Link>
 
-                    <div className='product-card-column-middle'>
+                    <div className='product-card-flex-column-middle'>
                         <Link to={`/product/${product._id}`}>
-                            <h1>{product.name}</h1>
+                            <h1>This h1 slot is designated for product name (<span className='fetch-data'>{product.name}</span>)</h1>
                         </Link>
 
-                        <p>{product.description}</p>
+                        <p>This p slot is designated for product description: {product.description} </p>
 
                     </div>
 
-                    <div className='product-card-column-right'>
+                    <div className='product-card-flex-column-right'>
                         <h2>{product.price}</h2>
 
-                        <button>Add to Cart</button>
+                        <Link to={``}>
+                            <button>Add to Cart</button>
+                        </Link>
+
                     </div>
 
                 </div>

@@ -1,20 +1,25 @@
 .product-container {
     border: solid black 3px;
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: row;
     padding: 1rem;
     overflow: scroll;
-   
+    height: 100%;
 }
 
 .product-card {
     border: solid rgb(232, 230, 230) 1px;
     border-style: solid none none none;
     background-color: var(--product-card-color);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
     width: 100%;
-    height: 15rem;
-    padding: 1rem;
+    /* height: 100%; */
+    height: 11rem;
+    padding: .1rem;
     font-size: .5rem;
     
 }
@@ -23,37 +28,46 @@ img {
     /* border: solid black 1px; */
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 8rem;
+    width: 8rem;
 }
 
-.product-card-column-left {
+.product-card-flex-column-top {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 1rem 1rem 1rem 0;
 }
 
-.product-card-column-middle {
+.product-card-flex-column-middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
     height: 100%;
+    padding: 1rem;
 }
 
-.product-card-column-middle > h1 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.product-card-flex-column-middle > h1 {
+    /* font-size: 1.5rem; */
     margin: .5rem;
     width: auto;
 }
 
-.product-card-column-middle > a {
+.fetch-data {
     text-transform: uppercase;
+}
+
+.product-card-flex-column-middle > a {
     text-decoration: none;
-    font-size: .7rem;
-    font-weight: normal;
+    /* font-size: .7rem; */
+    font-weight: 900;
     height: 4rem;
 }
 
-.product-card-column-middle > p {
+.product-card-flex-column-middle > p {
     display: flex;
     justify-content: center;
     font-size: .8rem;
@@ -62,20 +76,19 @@ img {
     height: 4rem;
 }
 
-.product-card-column-right > h2 {
+.product-card-flex-column-right > h2 {
     font-size: 2rem;
     text-align: left;
     height: 3rem;
 }
 
-.product-card-column-right {
+.product-card-flex-column-right {
     width: auto;
     height: 100%;
     /* height: 4rem; */
-
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 }
 
 button {

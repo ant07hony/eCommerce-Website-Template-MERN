@@ -16,6 +16,7 @@
     width: auto;
 } */
 
+/* .Main-footer needs to be relocated to Footer.css */
 .Main-footer {
     border: solid 2px rgb(247, 213, 42);
     /* display: flex;

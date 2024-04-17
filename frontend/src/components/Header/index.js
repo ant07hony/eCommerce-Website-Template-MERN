@@ -15,7 +15,7 @@ function handleSearchClick() {
 }
 
 const Nav = (props) => {
-    
+
     return (
         <nav className='nav-global'>
             <div className='logo-anchor'>
@@ -34,16 +34,16 @@ const Nav = (props) => {
             </div>
 
             <div className='search-bar'>
-                <label 
-                htmlFor='search'>
+                <label
+                    htmlFor='search'>
                 </label>
-                <input 
-                type='text' 
-                id='search' 
-                name='search bar'  placeholder='What can we help you find today?' />
+                <input
+                    type='text'
+                    id='search'
+                    name='search bar' placeholder='What can we help you find today?' />
                 <button type="submit" id="searchBtn"
-                onClick={handleSearchClick}>Search</button>
-                
+                    onClick={handleSearchClick}>Search</button>
+
             </div>
 
             <div className='store-locator'>
@@ -65,8 +65,11 @@ const Nav = (props) => {
 export default function Header(props) {
     return (
         <header className="Header-container">
+
             <Nav />
+
             {/* <img src={headerImage || headerImage}/> */}
             {/* <h1>Header</h1> */}
+           
         </header>)
 }
