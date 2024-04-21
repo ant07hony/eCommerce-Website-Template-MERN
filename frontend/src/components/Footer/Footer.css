@@ -1,6 +1,9 @@
-/* .Footer-container {
+.Footer-container {
     display: grid;
     border: solid 2px rgb(247, 213, 42);
+    background-color: var(--footer-bg-color);
+    border-color: var(--main-border-style-color);
+    border-style: solid none none none;
     height: 3rem;
     width: auto;
-} */
+}

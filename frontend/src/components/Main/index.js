@@ -10,7 +10,7 @@ export default function Main(props) {
     return (
         <main className='Main-container'>
 
-            <MainHeader />
+            {/* <MainHeader /> */}
            
             <div className='Main-container-top'>
                 <Routes>
@@ -33,11 +33,11 @@ export default function Main(props) {
                 </Routes>
             </div>
 
-            <div className='Main-footer'>
+            {/* <div className='Main-footer'>
 
                 <Footer />
 
-            </div>
+            </div> */}
             
         </main>
     )

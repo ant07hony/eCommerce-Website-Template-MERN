@@ -10,6 +10,7 @@
 
 .product-card {
     border: solid rgb(232, 230, 230) 1px;
+    border-color: var(--main-border-style-color);
     border-style: solid none none none;
     background-color: var(--product-card-color);
     display: flex;

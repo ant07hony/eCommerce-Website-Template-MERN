@@ -8,58 +8,38 @@
 
 :root {
   --main-bg-color: white;
+  --header-nav-global-bg-color: rgb(27, 83, 131);
+  --footer-bg-color: rgb(234, 233, 233);
+  --main-border-style-color: rgb(232, 230, 230);
   --product-card-color: white;
   --search-button-color: ;
   --add-to-cart-button-color: ;
 
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
 .App {
-  /* height: 100%;
-  width: auto; */
+  height: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
-  /* grid-gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: mminmax(100px, auto);
-  grid-template-areas: 
-    "Header Header Header Header"
-    "Aside Main Main Main"
-    "Footer Footer Footer Footer"
-    ; */
-  /* overflow: scroll; */
+  overflow: scroll;
 }
 
 .App > * {
   background-color: var(--main-bg-color);
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  /* height: 100%;
-  width: auto; */
-  /* border: solid 2px black; */
-}
 
-/* Header{
-  grid-area: Header;
-}
 
-Aside{
-  grid-area: Aside;
-}
-
-Main{
-  grid-area: Main;
-}
-
-Footer{
-  grid-area: Footer;
-} */
 
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
+  padding: 0;
   text-align: center;
   
 }

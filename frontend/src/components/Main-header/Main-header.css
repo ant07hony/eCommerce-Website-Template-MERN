@@ -1,22 +1,22 @@
 .Main-header {
     display: flex;
     justify-content: center;
-    border: solid 2px rgb(245, 135, 39);
-    background-color: rgb(0, 0, 255);;
-    height: 5rem;
+    align-content: center;
+    background-color: var(--header-nav-global-bg-color);
+    height: 2rem;
     width: auto;
     margin: 0;
+    padding: .5rem;
 }
 
-.Main-header-left-side {
-    height: 2rem;
+/* .Main-header-left-side {
     border: white solid 1px;
     display: flex;
     align-content: center;
     padding: .5rem;
-}
+} */
 
-.Main-header-left-side > ol {
+.Main-header > ol {
     padding: 0;
     font-size: .8rem;
     color: white;
@@ -26,11 +26,6 @@
     padding: 0 7rem 0 0;
 }
 
-/* .Main-header-left-side > li {
-    padding: 0 6rem 0 0;
-} */
-
 .Main-header-right-side {
-    height: 2rem;
     border: white solid 1px;
 }

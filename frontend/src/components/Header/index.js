@@ -14,10 +14,10 @@ function handleSearchClick() {
     // console.log(searchInputValue)
 }
 
-const Nav = (props) => {
+const NavTop = (props) => {
 
     return (
-        <nav className='nav-global'>
+        <nav className='nav-global-top'>
             <div className='logo-anchor'>
                 <Link to="/">Logo</Link>
             </div>
@@ -62,14 +62,30 @@ const Nav = (props) => {
     )
 }
 
+const NavBottom = (props) => {
+    return (
+        <nav className='nav-global-bottom'>
+            <ol>
+                <li>
+                    <a>Top Deals</a>
+                </li>
+                <li>
+                    <a>Deals of the Day</a>
+                </li>
+            </ol>
+        </nav>
+    )
+}
+
 export default function Header(props) {
     return (
         <header className="Header-container">
 
-            <Nav />
+            <NavTop />
+            <NavBottom />
 
             {/* <img src={headerImage || headerImage}/> */}
             {/* <h1>Header</h1> */}
-           
+
         </header>)
 }

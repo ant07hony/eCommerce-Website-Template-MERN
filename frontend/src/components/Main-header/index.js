@@ -4,9 +4,6 @@ export default function MainHeader(props){
     return (
         <header className='Main-header'>
 
-            <div className='Main-header-left-side'>
-            {/* <a>Top Deals</a>
-            <a>Deals of the Day</a> */}
             <ol>
                 <li>
                     <a>Top Deals</a>
@@ -15,10 +12,13 @@ export default function MainHeader(props){
                     <a>Deals of the Day</a>
                 </li>
             </ol>
+
+            {/* <div className='Main-header-left-side'>
             </div>
 
             <div className='Main-header-right-side'>
-            </div>
+            </div> */}
+
         </header>
     )
 }

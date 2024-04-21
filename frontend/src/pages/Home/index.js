@@ -9,10 +9,16 @@ export default function Home(props) {
         return (
             <div className='home-page'>
 
-                <div className='home-page-wrapper-1'>
+                <div className='home-page-sidebar'>
+                    <h1>
+                        Area designated for the Homepage Sidebar Colomn
+                    </h1>
+                </div>
+
+                <div className='home-page-wrapper'>
 
                     <h1>
-                    Area designated for the first Homepage wrapper
+                        Area designated for the Home Page Wrapper
                     </h1>
 
                 </div>
@@ -20,7 +26,7 @@ export default function Home(props) {
                 <div className='home-page-carousel'>
 
                     <h1>
-                        Area designated for a the Home page carousel
+                        Area designated for the Home Page Carousel
                     </h1>
 
                 </div>
@@ -40,7 +46,6 @@ export default function Home(props) {
                         />
                     </span>
                 </h1>
-
             </div>
         )
     }
