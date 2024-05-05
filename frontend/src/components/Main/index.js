@@ -1,9 +1,10 @@
 import './Main.css'
-import MainHeader from '../Main-header'
 import { Routes, Route } from 'react-router'
+import MainHeader from '../Main-header'
 import Home from '../../pages/Home'
 import Product from '../../pages/Product'
 import Show from '../../pages/Show'
+import Cart from '../../pages/Cart'
 import Footer from '../Footer'
 
 export default function Main(props) {
@@ -11,23 +12,28 @@ export default function Main(props) {
         <main className='Main-container'>
 
             {/* <MainHeader /> */}
-           
+
             <div className='Main-container-top'>
                 <Routes>
 
-                    <Route 
-                    path="/" 
-                    element={<Home />}
-                    />
-
-                    <Route 
-                    path="/products" 
-                    element={<Product />}
+                    <Route
+                        path="/"
+                        element={<Home />}
                     />
 
                     <Route
-                    path="/product/:id" 
-                    element={<Show />}
+                        path="/products"
+                        element={<Product />}
+                    />
+
+                    <Route
+                        path="/product/:id"
+                        element={<Show />}
+                    />
+
+                    <Route
+                        path="/products/cart"
+                        element={<Cart />}
                     />
 
                 </Routes>
@@ -38,7 +44,7 @@ export default function Main(props) {
                 <Footer />
 
             </div> */}
-            
+
         </main>
     )
 }

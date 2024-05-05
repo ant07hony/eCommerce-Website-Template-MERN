@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-around;
     /* border: solid 2px rgb(43, 244, 39); */
+    border-bottom: 1px solid var(--header-nav-global-border-color);
     height: 100%;
     padding: .8rem 2rem;
     background-color: var(--header-nav-global-bg-color);
@@ -53,7 +54,7 @@
   }
 
 
-  .hamburger-menu {
+  .hamburger-dropdown-menu {
     /* border: solid black 1px; */
     display: flex;
     justify-content: flex-start;
@@ -69,7 +70,7 @@
     max-width: 1.5rem;
   }
 
-  .dropdown-menu {
+  .hamburger-menu {
     /* border: solid black 1px; */
     display: flex;
     flex-direction: column;
@@ -78,17 +79,49 @@
     padding: .4rem .1rem .4rem .25rem;
     width: 2.75rem;
   }
-
-  .hamburger-menu > button {
+  
+  .hamburger-dropdown-menu > button {
     margin: 0;
     height: 100%;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: .9rem;
     color: white;
     padding: 0 0 0 .1rem;
     background-color: var(--header-nav-global-bg-color);
     border: none;
     text-align: left;
+    font-weight: normal;
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    /* border: solid black 3px; */
+    position: absolute;
+    width: 15%;
+    height: auto;
+    margin-top: 2rem;
+    background-color: var(--dropdown-bg-color);
+    border: solid 1px;
+    border-color: var(--dropdown-border-color);
+  }
+
+  .dropdown-menu ul {
+    height: auto;
+    list-style: none;
+    /* padding: .5rem; */
+    padding: 0 1rem;
+
+  }
+
+  .dropdown-menu li {
+    height: 2.5rem;
+    /* padding: 1rem; */
+    align-content: center;
+    border-bottom: solid var(--dropdown-border-color);
+  }
+
+  .dropdown-menu :last-child {
+    border-bottom: none;
   }
 
   .search-bar > label {
@@ -141,16 +174,17 @@
   }
 
   .cart {
-    /* border: solid black 1px; */
-    max-width: 3rem;
-  }
-
-  .cart > button {
     height: 100%;
     width: 100%;
-    margin: 0;
-    border: none;
-    border-radius: .2rem;
+    max-width: 3rem;
     color: white;
     background-color: var(--header-nav-global-bg-color);
+    align-content: center;
+    text-decoration: none;
+    font-size: .9rem;
   }
+
+  /* .cart > a {
+    color: white;
+    background-color: var(--header-nav-global-bg-color);
+  } */

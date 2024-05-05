@@ -13,12 +13,6 @@ export default function MainHeader(props){
                 </li>
             </ol>
 
-            {/* <div className='Main-header-left-side'>
-            </div>
-
-            <div className='Main-header-right-side'>
-            </div> */}
-
         </header>
     )
 }
