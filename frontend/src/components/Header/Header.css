@@ -8,6 +8,8 @@
     width: auto;
   }
 
+  /* --- Top portion of nav bar --- */
+
   .nav-global-top {
     display: flex;
     justify-content: space-around;
@@ -17,6 +19,9 @@
     padding: .8rem 2rem;
     background-color: var(--header-nav-global-bg-color);
   }
+
+
+  /* --- Bottom portion of nav  bar --- */
 
   .nav-global-bottom {
     display: flex;
@@ -39,6 +44,8 @@
     padding: 0 7rem 0 0;
   }
 
+  /* --- Logo section of nav bar --- */
+
   .logo-anchor {
     /* border: solid black 1px; */
     display: grid;
@@ -53,13 +60,56 @@
     text-decoration: none;
   }
 
+/* --- Hamburger + menu button portion of nav bar --- */
 
   .hamburger-dropdown-menu {
-    /* border: solid black 1px; */
+    border: solid black 1px;
     display: flex;
+    /* flex-direction: column; */
     justify-content: flex-start;
     margin: 0 .5rem;
     max-width: 6.30rem;
+  }
+
+  .hamburger-menu {
+    border: solid black 1px;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 2.75rem;
+    position: relative;
+  }
+
+  .show {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .display{
+    display: none;
+    visibility: hidden;
+  }
+
+  .hide {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .activate-hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    padding: .4rem .25rem;
+    visibility: visible;
   }
 
   .hamburger-menu-line {
@@ -67,17 +117,42 @@
     border-radius: .3rem;
     height: .15rem;
     background-color: white;
-    max-width: 1.5rem;
+    /* max-width: 1.5rem; */
+    /* z-index: -1; */
   }
 
-  .hamburger-menu {
-    /* border: solid black 1px; */
+  .deactivate-hamburger-menu {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: .4rem .1rem .4rem .25rem;
-    width: 2.75rem;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 45%;
+    margin: 0;
+    padding: 0 0 0 .09rem;
+    visibility: hidden;
+  }
+
+  .left-line {
+    rotate: 45deg;
+    width: 1rem;
+    border-radius: .3rem;
+    height: .15rem;
+    background-color: white;
+    position: relative;
+    left: 25%;
+    /* top: .15rem; */
+  }
+
+  .right-line {
+    rotate: -45deg;
+    width: 1rem;
+    border-radius: .3rem;
+    height: .15rem;
+    background-color: white;
+    max-width: 1.5rem;
+    position: relative;
+    right: 25%;
+    /* top: .15rem; */
   }
   
   .hamburger-dropdown-menu > button {
@@ -103,6 +178,19 @@
     background-color: var(--dropdown-bg-color);
     border: solid 1px;
     border-color: var(--dropdown-border-color);
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .active-hamburger-menu-triangle-tab {
+    border-bottom: .5rem solid var(--dropdown-bg-color);
+    border-right: .75rem solid transparent;
+    border-left: .75rem solid transparent;
+    height: 0;
+    width: 0;
+    margin-left: .34rem;
+    position: absolute;
+    top: -.4rem;
   }
 
   .dropdown-menu ul {
@@ -124,6 +212,8 @@
     border-bottom: none;
   }
 
+
+  /* --- Search Bar --- */
   .search-bar > label {
     width: 0;
   }

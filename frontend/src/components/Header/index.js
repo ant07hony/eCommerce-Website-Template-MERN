@@ -14,10 +14,29 @@ function handleSearchClick() {
     // console.log(searchInputValue)
 }
 
-function dropdownMenu() {
 
+function toggleDropdownMenu() {
 
+    const activateDropdownMenu = document.getElementById("activate-menu");
+    const deactivateDropdownMenu = document.getElementById("deactivate-menu");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const hamburgerMenuLine = document.getElementsByClassName("hamburger-menu-line")
 
+    // proper orientation for opened dropdown menu
+    // activateDropdownMenu.style.display = "none";
+    // deactivateDropdownMenu.style.visibility = "visible";
+    // dropdownMenu.style.visibility = "visible"
+
+    if (activateDropdownMenu.style.display != "none") {
+        activateDropdownMenu.style.display = "none";
+        deactivateDropdownMenu.style.visibility = "visible";
+        dropdownMenu.style.visibility = "visible"
+    } else {
+        activateDropdownMenu.style.display = "flex";
+        deactivateDropdownMenu.style.visibility = "hidden";
+        dropdownMenu.style.visibility = "hidden";
+    }
 }
 
 const NavTop = (props) => {
@@ -31,17 +50,34 @@ const NavTop = (props) => {
                 </Link>
             </div>
 
-            <div className='hamburger-dropdown-menu'>
+            <div
+                className='hamburger-dropdown-menu'
+                id='hamDroMnu'
+                onClick={toggleDropdownMenu}
+            >
 
-                <div className='hamburger-menu'>
 
-                    <div className='hamburger-menu-line'>
+                <div className='hamburger-menu' id='hamburger-menu'>
+
+                    <div className='activate-hamburger-menu' id='activate-menu'>
+
+                        <div className='hamburger-menu-line'>
+                        </div>
+
+                        <div className='hamburger-menu-line'>
+                        </div>
+
+                        <div className='hamburger-menu-line'>
+                        </div>
+
                     </div>
 
-                    <div className='hamburger-menu-line'>
-                    </div>
+                    <div className='deactivate-hamburger-menu' id='deactivate-menu'>
 
-                    <div className='hamburger-menu-line'>
+                        <div className='left-line'></div>
+
+                        <div className='right-line'></div>
+
                     </div>
 
                 </div>
@@ -49,21 +85,31 @@ const NavTop = (props) => {
                 <button
                     type='button'
                     id='dropdownBtn'
-                    onClick={dropdownMenu}
                 >
                     Menu
                 </button>
 
-                <div className='dropdown-menu'>
+                <div className='dropdown-menu' id='dropdown-menu'>
+
+                    <div className='active-hamburger-menu-triangle-tab'>
+                    </div>
 
                     <ul>
                         {/* look up purpose of href used below */}
-                        <li href='/'>Home
+                        <li href=''>Home
                             <span className='dropdown-list-arrow'></span>
                         </li>
 
-                        <li href='/products'>Products
-                        <span className='dropdown-list-arrow'></span>
+                        <li href=''>Products
+                            <span className='dropdown-list-arrow'></span>
+                        </li>
+
+                        <li href=''>Cart
+                            <span className='dropdown-list-arrow'></span>
+                        </li>
+
+                        <li href=''>Contact Us
+                            <span className='dropdown-list-arrow'></span>
                         </li>
 
                     </ul>
