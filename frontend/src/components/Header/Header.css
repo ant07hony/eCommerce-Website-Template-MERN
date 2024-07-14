@@ -69,6 +69,7 @@
     justify-content: flex-start;
     margin: 0 .5rem;
     max-width: 6.30rem;
+    /* position: abaolute; */
   }
 
   .hamburger-menu {
@@ -80,6 +81,7 @@
     width: 50%;
     max-width: 2.75rem;
     position: relative;
+    /* display: inline-block; */
   }
 
   .show {
@@ -178,8 +180,8 @@
     background-color: var(--dropdown-bg-color);
     border: solid 1px;
     border-color: var(--dropdown-border-color);
-    position: absolute;
     visibility: hidden;
+    /* display: none; */
   }
 
   .active-hamburger-menu-triangle-tab {
@@ -194,6 +196,7 @@
   }
 
   .dropdown-menu ul {
+    /* position: relative; */
     height: auto;
     list-style: none;
     /* padding: .5rem; */

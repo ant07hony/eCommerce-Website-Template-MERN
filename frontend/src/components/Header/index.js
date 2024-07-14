@@ -14,30 +14,62 @@ function handleSearchClick() {
     // console.log(searchInputValue)
 }
 
-
-function toggleDropdownMenu() {
+// function to toggle open dropdown menu when clicking hamburger menu/button
+function openDropdownMenu() {
 
     const activateDropdownMenu = document.getElementById("activate-menu");
     const deactivateDropdownMenu = document.getElementById("deactivate-menu");
     const dropdownMenu = document.getElementById("dropdown-menu");
-    const hamburgerMenu = document.getElementById("hamburger-menu");
-    const hamburgerMenuLine = document.getElementsByClassName("hamburger-menu-line")
 
-    // proper orientation for opened dropdown menu
-    // activateDropdownMenu.style.display = "none";
-    // deactivateDropdownMenu.style.visibility = "visible";
-    // dropdownMenu.style.visibility = "visible"
-
+    // condition to toggle dropdown menu using hamburger menu/button
     if (activateDropdownMenu.style.display != "none") {
         activateDropdownMenu.style.display = "none";
         deactivateDropdownMenu.style.visibility = "visible";
         dropdownMenu.style.visibility = "visible"
-    } else {
+    }
+    else if (activateDropdownMenu.style.display != "flex") {
+        // close dropdown menu when clicking outside hamburger menu container
+        window.addEventListener('click', function () {
+            activateDropdownMenu.style.display = "flex";
+            deactivateDropdownMenu.style.visibility = "hidden";
+            dropdownMenu.style.visibility = "hidden";
+        }, true)
+    }
+    else {
+        // default position of dropdown menu
         activateDropdownMenu.style.display = "flex";
+        deactivateDropdownMenu.style.visibility = "hidden";
+        dropdownMenu.style.visibility = "hidden";
+
+    }
+}
+
+
+// condition to return dropdown menu to default condition when mouse click document window
+function dropdownContent() {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const activateDropdownMenu = document.getElementById("activate-menu");
+    const deactivateDropdownMenu = document.getElementById("deactivate-menu");
+
+    dropdownMenu.classList.toggle('hide');
+
+    if (dropdownMenu.classList.contains('hide')) {
+        activateDropdownMenu.style.display = 'flex';
         deactivateDropdownMenu.style.visibility = "hidden";
         dropdownMenu.style.visibility = "hidden";
     }
 }
+
+window.onload = function () {
+    const hamburgerMenu = document.getElementById('hamDroMnu');
+    hamburgerMenu.addEventListener('click', openDropdownMenu);
+
+}
+
+document.addEventListener('click', function () {
+    
+    dropdownContent()
+})
 
 const NavTop = (props) => {
 
@@ -53,7 +85,8 @@ const NavTop = (props) => {
             <div
                 className='hamburger-dropdown-menu'
                 id='hamDroMnu'
-                onClick={toggleDropdownMenu}
+            // onClick={openDropdownMenu}
+            // onClick={dropdownContent}
             >
 
 
@@ -93,10 +126,11 @@ const NavTop = (props) => {
 
                     <div className='active-hamburger-menu-triangle-tab'>
                     </div>
-
+                    {/* need to switch out lists with anchors */}
+                    {/* <a href='/'>Home</a> */}
                     <ul>
                         {/* look up purpose of href used below */}
-                        <li href=''>Home
+                        <li href='/'>Home
                             <span className='dropdown-list-arrow'></span>
                         </li>
 
