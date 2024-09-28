@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt')
 const { createUserToken } = require('../middleware/auth')
 const { User } = require('../models')
 
-export async function register( req, res, next) {
+async function register( req, res, next) {
     try{
         const salt = await bcrypt.genSalt(10)
         const passwordHash = await bcrypt.hash(req.body.password, salt)
@@ -29,7 +29,7 @@ export async function register( req, res, next) {
     }
 }
 
-export async function login( req, res, next) {
+async function login( req, res, next) {
     try {
         const username = req.body.username
         const foundUser = await User.findOne({ username: username })
@@ -40,4 +40,9 @@ export async function login( req, res, next) {
     }catch(error){
         res.status(400).json({error: error.message})
     }
+}
+
+module.exports = {
+    register,
+    login
 }

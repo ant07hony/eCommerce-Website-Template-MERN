@@ -7,6 +7,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 const productRouter = require('./routes/product-router')
+const authRouter = require('./routes/auth-router')
 
 // CONFIGURATION
 const app = express()
@@ -20,6 +21,7 @@ app.use(cors())
 
 // ROUTER MIDDLEWARE
 app.use('/product', productRouter)
+app.use('/auth', authRouter)
 
 
 // HOME ROUTE
