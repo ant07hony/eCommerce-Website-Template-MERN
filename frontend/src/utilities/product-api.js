@@ -1,28 +1,47 @@
 const apiUrl = process.env.REACT_APP_API_URL
+// console.log("api url: ", apiUrl)
 
+// RENDER
 export async function index() {
     try{
         const options = {
             method: 'GET'
         }
-        const requestFetch = await fetch(apiUrl, options)
+        const url = `${apiUrl}`
+        const response = await fetch(url, options)
         
-        if(requestFetch.ok){
-            const requestData = requestFetch.json()
+        if(response.ok){
+            const requestData = response.json()
             // console.log(`index data: ${requestData}`)
             return requestData 
         } else {
-            throw new Error('Invalid Request')
+            throw new Error('Invalid GET Request')
         }
     } catch(error){
         console.log(error)
         return error
     }
 }
+// console.log(index())
 
+// CREATE
 export async function create(data) {
     try{
-        
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }
+
+        const response = await fetch(apiUrl, options)
+
+        if(response.ok){
+            return response.json()
+        } else {
+            throw new Error("Invalid POST Request")
+        }
 
     } catch(error){
         console.log(error)
@@ -30,21 +49,22 @@ export async function create(data) {
     }
 }
 
+// SHOW
 export async function details(id) {
     try{
         const options = {
             method: 'GET',
         }
-
-        const requestFetch = await fetch(`${apiUrl}/${id}`, options)
+        const url = `${apiUrl}/${id}`
+        const response = await fetch(url, options)
         // console.log(requestFetch)
 
-        if(requestFetch.ok){
-            const requestData = requestFetch.json()
+        if(response.ok){
+            const requestData = response.json()
             // console.log(`show data: ${requestData}`)
             return requestData
-        }else{
-            throw new Error('Invalid Request')
+        } else {
+            throw new Error('Invalid GET Request')
         }
     } catch(error){
         console.log(error)
@@ -52,8 +72,25 @@ export async function details(id) {
     }
 }
 
+// UPDATE
 export async function update(id, data) {
     try{
+        const options = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }
+
+        const url = `${apiUrl}/${id}`
+        const response = await fetch(url, options)
+
+        if(response.ok){
+            return response.json()
+        } else {
+            throw new Error("Invalid PUT Request")
+        }
 
     } catch(error){
         console.log(error)
@@ -61,8 +98,20 @@ export async function update(id, data) {
     }
 }
 
+// DELETE
 export async function destroy(id) {
     try{
+        const options = {
+            method: "DELETE"
+        }
+        const url = `${apiUrl}/${id}`
+        const response = await fetch(url, options)
+
+        if(response.ok){
+            return response.json()
+        } else {
+            throw new Error("Invalid DELETE Request")
+        }
 
     } catch(error){
         console.log(error)
