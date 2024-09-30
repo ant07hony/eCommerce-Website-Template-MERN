@@ -8,13 +8,11 @@ async function register( req, res, next) {
         const passwordHash = await bcrypt.hash(req.body.password, salt)
         const pwCache = req.body.password
 
-        req.body.password = passwordHash
-
         const newUser = await User.create(req.body)
 
         if(newUser){
             req.body.password = pwCache
-            const authenticatedUser = await createUserToken(req, newUser)
+            const authenticatedUser = createUserToken(req, newUser)
             res.status(200).json({
                 user: newUser,
                 token: authenticatedUser
@@ -33,8 +31,11 @@ async function login( req, res, next) {
     try {
         const username = req.body.username
         const foundUser = await User.findOne({ username: username })
-        const token = await createUserToken(req, foundUser)
-        res.status(200).json({token, user: foundUser})
+        const token = createUserToken(req, foundUser)
+        res.status(200).json({
+            user: foundUser, 
+            token: token 
+        })
 
 
     }catch(error){
