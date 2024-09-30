@@ -2,9 +2,11 @@ import './Main.css'
 import { Routes, Route } from 'react-router'
 import MainHeader from '../Main-header'
 import Home from '../../pages/Home'
+import Auth from '../../pages/Auth'
 import Product from '../../pages/Product'
 import Show from '../../pages/Show'
 import Cart from '../../pages/Cart'
+import Profile from '../../pages/Profile'
 import Footer from '../Footer'
 
 export default function Main(props) {
@@ -21,6 +23,11 @@ export default function Main(props) {
                         element={<Home />}
                     />
 
+                    <Route 
+                        path='/auth'
+                        element={<Auth />} 
+                    />
+
                     <Route
                         path="/products"
                         element={<Product />}
@@ -34,6 +41,11 @@ export default function Main(props) {
                     <Route
                         path="/products/cart"
                         element={<Cart />}
+                    />
+
+                    <Route 
+                        path='/profile'
+                        element={<Profile />}
                     />
 
                 </Routes>

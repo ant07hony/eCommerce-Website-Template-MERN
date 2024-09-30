@@ -1,0 +1,6 @@
+utilities > auth-api.js - test and verify { authUrl }
+
+make the Auth component folder with LoginForm.jsx and RegisterForm.jsx
+
+** DONE ** import {Routes, Route} from 'react-router' and import Auth from '../../pages/Auth' in Main Component and create <Route path='/auth' element={ <Auth/>} /> ** DONE **
+
