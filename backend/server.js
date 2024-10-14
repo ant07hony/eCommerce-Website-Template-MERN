@@ -22,7 +22,7 @@ app.use(cors())
 // ROUTER MIDDLEWARE
 app.use('/product', productRouter)
 app.use('/auth', authRouter)
-
+authRouter
 
 // HOME ROUTE
 app.get('/', (req, res)=>{res.send('Hello You Filthy Animal')})
