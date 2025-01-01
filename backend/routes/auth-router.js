@@ -11,7 +11,7 @@ router.post('/register', authCtrl.register)
 router.post('/login', authCtrl.login)
 
 // ROUTE TO LOGOUT CURRENT USER
-router.get('/logout', (req, res, next) => res.send('Logging out'))
+router.get('/logout', authCtrl.logout)
 
 // THIS IS A TEST ROUTE TO TEST SYNTAX
 // router.get('/test', (req, res, next) => res.send('This is a test message!'))

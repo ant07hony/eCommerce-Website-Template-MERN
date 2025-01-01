@@ -30,7 +30,7 @@ async function index(req, res, next) {
 
     }
 };
-
+// TEST register()
 async function register(req, res, next) {
     try {
 
@@ -43,13 +43,13 @@ async function register(req, res, next) {
         if (newUser) {
 
             const authenticatedUser = createUserToken(req, newUser)
-            console.log( ` user: ${newUser}, token: ${token} ` )
             res.status(200).json({
 
                 user: newUser,
                 token: authenticatedUser
 
             })
+
         } else {
 
             throw new Error('Something went wrong with authentication')
@@ -63,23 +63,23 @@ async function register(req, res, next) {
 
     }
 }
-
+// TEST login()
 async function login(req, res, next) {
     try {
 
-        const { username, password } = req.body
+        const { username } = req.body
         const foundUser = await User.findOne({ username: username })
 
         if (foundUser) {
 
             const token = createUserToken(req, foundUser)
-            console.log( ` user: ${foundUser}, token: ${token} ` )
             res.status(200).json({
 
                 user: foundUser,
                 token: token
 
             })
+            
 
         } else {
             throw new Error('Login Failed. Try Again!')
@@ -91,9 +91,23 @@ async function login(req, res, next) {
     }
 }
 
+async function logout ( req, res, next) {
+    try{
+
+        // clear logged in user token
+        localStorage.clear()
+        location.href = '/'
+
+    }catch( error ){
+        console.log( error )
+        res.status(400).json({ error: error.message })
+    }
+}
+
 module.exports = {
     testMessage,
     index,
     register,
-    login
+    login,
+    logout
 }
